@@ -1,0 +1,68 @@
+1400477/1 	Ganguly, Sandipan 	sandipan.ganguly@kcl.ac.uk 	Current 	Intelligent Systems 	
+1529757/1 	MacLean, Cameron Ian 	cameron.maclean@kcl.ac.uk 	Current 	Computing And Security 	
+1542196/3 	Sarosi, Marcell 	marcell.sarosi@kcl.ac.uk 	Current 	Advanced Software Engineering With Management 	
+1781404/1 	Muhumuza, Isaac 	isaac.muhumuza@kcl.ac.uk 	Current 	Advanced Software Engineering With Management 	
+1801643/1 	Alghamdi, Samah 	samah.alghamdi@kcl.ac.uk 	Current 	Computing And Security 	
+1804098/1 	Song, Yingdi 	yingdi.song@kcl.ac.uk 	Current 	Computing And Security 	
+1804202/1 	Jiang, Haocheng 	haocheng.jiang@kcl.ac.uk 	Current 	Robotics 	
+1805051/1 	Bai, Xiaoxue 	xiaoxue.bai@kcl.ac.uk 	Current 	Computing And Security 	
+1805081/1 	He, Xi 	xi.he@kcl.ac.uk 	Current 	Computing And Security 	
+1808157/1 	Wu, Jian 	jian.wu@kcl.ac.uk 	Current 	Robotics 	
+1808194/2 	Pi, Yuheng 	yuheng.pi@kcl.ac.uk 	Current 	Intelligent Systems 	
+1814237/1 	Zhu, Yu 	yu.2.zhu@kcl.ac.uk 	Current 	Advanced Software Engineering 	
+1815031/1 	Osei-Bonsu, Yusaf 	yusaf.osei-bonsu@kcl.ac.uk 	Current 	Advanced Software Engineering 	
+1815517/1 	Jin, Kunxiang 	kunxiang.jin@kcl.ac.uk 	Current 	Advanced Software Engineering 	
+1816186/1 	Li, Xinyu 	xinyu.1.li@kcl.ac.uk 	Current 	Intelligent Systems 	
+1816772/2 	Ji, Dongang 	dongang.ji@kcl.ac.uk 	Current 	Advanced Software Engineering 	
+1816977/1 	Fidarov, Georgii 	georgii.fidarov@kcl.ac.uk 	Current 	Robotics 	
+1817456/2 	Zhu, Tianning 	tianning.zhu@kcl.ac.uk 	Current 	Web Intelligence 	
+1819508/2 	Qi, Zhipeng 	zhipeng.qi@kcl.ac.uk 	Current 	Advanced Software Engineering With Management 	
+1819642/1 	Zhou, Jiawei 	jiawei.zhou@kcl.ac.uk 	Current 	Intelligent Systems 	
+1819943/1 	Zhang, Zhejian 	zhejian.zhang@kcl.ac.uk 	Current 	Web Intelligence 	
+1820495/1 	Fu, Zifei 	zifei.fu@kcl.ac.uk 	Current 	Computing And Internet Systems 	
+1820816/1 	Zhang, Boyang 	boyang.zhang@kcl.ac.uk 	Current 	Computing And Security 	
+1821274/1 	Liu, Huikang 	huikang.liu@kcl.ac.uk 	Current 	Computing And Security 	
+1821307/1 	Choi, Daeun 	daeun.choi@kcl.ac.uk 	Current 	Computing And Internet Systems 	
+1822373/1 	Zhou, Qilin 	qilin.zhou@kcl.ac.uk 	Current 	Advanced Software Engineering 	
+1822663/1 	Kayongo, James Eric 	james.kayongo@kcl.ac.uk 	Current 	Computing And Security 	
+1822709/1 	Peng, Xiaoyue 	xiaoyue.peng@kcl.ac.uk 	Current 	Computing And Security 	
+1823228/1 	Dai, Wenhao 	wenhao.dai@kcl.ac.uk 	Current 	Computing And Internet Systems 	
+1823375/1 	Wang, Letao 	letao.wang@kcl.ac.uk 	Current 	Advanced Software Engineering 	
+1823622/1 	Ling, Chen 	chen.ling@kcl.ac.uk 	Current 	Computing And Internet Systems 	
+1826930/1 	Ye, Tehao 	tehao.ye@kcl.ac.uk 	Current 	Advanced Software Engineering 	
+1829975/1 	Ding, Jiawei 	jiawei.ding@kcl.ac.uk 	Current 	Intelligent Systems 	
+1831113/1 	Huang, Yenan 	yenan.huang@kcl.ac.uk 	Current 	Computing And Security 	
+1833095/1 	Yao, Te-Chien 	te-chien.yao@kcl.ac.uk 	Current 	Advanced Software Engineering With Management 	
+1834878/1 	Zhu, Zhihao 	zhihao.zhu@kcl.ac.uk 	Current 	Web Intelligence 	
+1834882/1 	Xu, Yiran 	yiran.xu@kcl.ac.uk 	Current 	Advanced Software Engineering With Management 	
+1836287/1 	Wu, Zihao 	zihao.1.wu@kcl.ac.uk 	Current 	Advanced Software Engineering With Management 	
+1837795/1 	Bai, Shuwen 	shuwen.bai@kcl.ac.uk 	Current 	Intelligent Systems 	
+1839502/1 	Liu, Yibo 	yibo.liu@kcl.ac.uk 	Current 	Advanced Software Engineering With Management 	
+1842323/2 	Fu, Yongwei 	yongwei.fu@kcl.ac.uk 	Current 	Intelligent Systems 	
+1842973/1 	Yu, Ying 	ying.yu@kcl.ac.uk 	Current 	Computing And Security 	
+1844334/1 	Zhan, Xiao 	xiao.zhan@kcl.ac.uk 	Current 	Computing And Security 	
+1845291/1 	He, Bo 	bo.he@kcl.ac.uk 	Current 	Advanced Software Engineering 	
+1845555/1 	Li, Jiashuo 	jiashuo.li@kcl.ac.uk 	Current 	Computing And Internet Systems 	
+1845664/1 	Subramanian, Sivaranjani 	sivaranjani.subramanian@kcl.ac.uk 	Current 	Advanced Software Engineering With Management 	
+1846353/1 	Hwang, Jihye 	jihye.hwang@kcl.ac.uk 	Current 	Advanced Software Engineering 	
+1848348/1 	Li, Kexin 	kexin.3.li@kcl.ac.uk 	Current 	Advanced Software Engineering With Management 	
+1853913/2 	Bao, Yigang 	yigang.bao@kcl.ac.uk 	Current 	Intelligent Systems 	
+1862457/1 	Krairit, Chayanit 	chayanit.krairit@kcl.ac.uk 	Current 	Computing And Internet Systems 	
+1862819/1 	Fu, Yixin 	yixin.fu@kcl.ac.uk 	Current 	Advanced Software Engineering With Management 	
+1863752/2 	Li, Yan 	yan.1.li@kcl.ac.uk 	Current 	Intelligent Systems 	
+1863966/1 	Chen, Lili 	lili.chen@kcl.ac.uk 	Current 	Advanced Software Engineering With Management 	
+1866550/1 	Chi, Mohan 	mohan.chi@kcl.ac.uk 	Current 	Advanced Software Engineering With Management 	
+1866632/1 	Handuja, Saloni 	saloni.handuja@kcl.ac.uk 	Current 	Advanced Software Engineering 	
+1868733/1 	Vasiliou, Christakis 	christakis.vasiliou@kcl.ac.uk 	Current 	Computing And Security 	
+1873491/1 	Doebeli, Alain Claude 	alain.doebeli@kcl.ac.uk 	Current 	Computing And Security 	
+1873525/1 	Solheim, Frida Johanne 	frida.solheim@kcl.ac.uk 	Current 	Computing And Security 	
+1874348/1 	Zheng, Yifeng 	yifeng.zheng@kcl.ac.uk 	Current 	Computing And Security 	
+1876334/1 	Zhang, Yiwei Harper 	yiwei.1.zhang@kcl.ac.uk 	Current 	Intelligent Systems 	
+1877520/1 	Chen, Yankai 	yankai.chen@kcl.ac.uk 	Current 	Computing And Internet Systems 	
+1877590/1 	Dominguez Garcia-Guijas, Ignacio 	ignacio.dominguez_garcia-guijas@kcl.ac.uk 	Current 	Computing And Security 	
+1877963/1 	Singh, Mandeep 	mandeep.singh@kcl.ac.uk 	Current 	Computing And Security 	
+1879775/1 	Oikonomou, Konstantinos 	konstantinos.oikonomou@kcl.ac.uk 	Current 	Advanced Software Engineering With Management 	
+1879867/1 	Rizos, Nikolaos 	nikolaos.rizos@kcl.ac.uk 	Current 	Computing And Internet Systems 	
+1880679/1 	Robinson, Thomas James 	thomas.robinson@kcl.ac.uk 	Current 	Web Intelligence 	
+1881242/1 	Li, Haonan 	haonan.li@kcl.ac.uk 	Current 	Computing And Internet Systems 	
+1883689/1 	Tyagi, Shefali 	shefali.tyagi@kcl.ac.uk 	Current 	Advanced Software Engineering With Management 	
