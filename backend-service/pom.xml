@@ -8,7 +8,7 @@
 		<version>2.1.2.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>benediction.group.api</groupId>
+	<groupId>kcl.group.api</groupId>
 	<artifactId>backend-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>backend-service</name>
@@ -38,6 +38,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.openpojo</groupId>
+			<artifactId>openpojo</artifactId>
+			<version>0.8.10</version>
 		</dependency>
 	</dependencies>
 

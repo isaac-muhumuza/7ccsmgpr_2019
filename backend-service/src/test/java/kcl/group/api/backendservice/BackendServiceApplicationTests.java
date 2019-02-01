@@ -1,4 +1,4 @@
-package benediction.group.api.backendservice;
+package kcl.group.api.backendservice;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
