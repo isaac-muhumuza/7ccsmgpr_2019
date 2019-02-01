@@ -1,4 +1,4 @@
-package benediction.group.api.backendservice;
+package kcl.group.api.backendservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
