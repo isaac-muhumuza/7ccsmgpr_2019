@@ -1,5 +1,13 @@
 package kcl.group.api.backendservice.model;
 
+/**
+ * <p>
+ * This class provides details about used Files.
+ * <p>
+ *
+ * @author : KCL Benediction Group
+ **/
+
 public class FileDto {
 
     private String fileName;

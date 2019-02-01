@@ -12,6 +12,14 @@ import org.springframework.web.multipart.MultipartFile;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
+/**
+ * <p>
+ * This class implements web interaction.
+ * <p>
+ *
+ * @author : KCL Benediction Group
+ **/
+
 @RestController
 public class FileController {
 
