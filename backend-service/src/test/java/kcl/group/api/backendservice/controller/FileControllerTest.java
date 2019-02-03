@@ -1,21 +1,29 @@
 package kcl.group.api.backendservice.controller;
 
 import kcl.group.api.backendservice.service.FileStoreService;
-import org.assertj.core.api.AbstractStringAssert;
-import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.UrlResource;
+import org.springframework.http.HttpHeaders;
 import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.BDDMockito.given;
 import static org.mockito.BDDMockito.then;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.fileUpload;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.multipart;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
@@ -32,12 +40,23 @@ public class FileControllerTest {
     public void shouldSaveUploadedFile() throws Exception {
         MockMultipartFile multipartFile = new MockMultipartFile("file", "testFile.txt",
                 "text/plain", "This is a test for the upload function!".getBytes());
-        MvcResult result = this.mockMvc.perform(fileUpload("/upload").file(multipartFile))
+        MvcResult result = this.mockMvc.perform(multipart("/upload").file(multipartFile))
                 .andExpect(status().isOk())
                 .andReturn();
         then(this.fileStoreService).should().saveFile(multipartFile);
 
-        AbstractStringAssert<?> equalTo = Assertions.assertThat(result.getResponse().getContentAsString()).containsIgnoringCase("\"fileSize\":"+multipartFile.getSize());
+        assertThat(result.getResponse().getContentAsString()).containsIgnoringCase("\"fileSize\":"+multipartFile.getSize());
     }
+    @Test
+    public void shouldDownloadFile() throws Exception {
 
+        Resource resource = new ClassPathResource("downloadTestFile.txt");
+        given(this.fileStoreService.downloadFileAsResource(resource.getFilename())).willReturn(resource);
+        MvcResult result = this.mockMvc.perform(get("/download/downloadTestFile.txt"))
+                .andExpect(status().isOk())
+                .andReturn();
+
+        assertThat(result.getResponse().getHeader(HttpHeaders.CONTENT_DISPOSITION)).containsIgnoringCase(resource.getFilename());
+
+    }
 }

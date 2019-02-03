@@ -2,15 +2,20 @@ package kcl.group.api.backendservice.service.impl;
 
 import kcl.group.api.backendservice.config.FileLocationConfig;
 import kcl.group.api.backendservice.exception.FileException;
+import kcl.group.api.backendservice.exception.ResouceFileNotFoundException;
 import kcl.group.api.backendservice.service.FileStoreService;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -55,5 +60,22 @@ public class FileStoreServiceImpl implements FileStoreService {
         }
         return filename;
 
+    }
+
+    @Override
+    public Resource downloadFileAsResource(String filename) throws ResouceFileNotFoundException {
+
+        try {
+            Path path = rootDirectory.resolve(filename);
+            Resource resource = new UrlResource(path.toUri());
+
+            if(!resource.exists() || !resource.isReadable()){
+                throw new ResouceFileNotFoundException("Cannot access File"+filename);
+            }
+
+            return resource;
+        } catch (MalformedURLException e) {
+            throw new ResouceFileNotFoundException("Cannot find specified File", e);
+        }
     }
 }
