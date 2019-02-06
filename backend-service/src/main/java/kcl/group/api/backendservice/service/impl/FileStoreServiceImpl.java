@@ -9,17 +9,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
+import org.springframework.util.FileSystemUtils;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.FileNotFoundException;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
+import java.nio.file.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
@@ -54,7 +54,11 @@ public class FileStoreServiceImpl implements FileStoreService {
         try {
             Path fileDestination = this.rootDirectory.resolve(filename);
             InputStream inputStream = multipartFile.getInputStream();
-            Files.copy(inputStream, fileDestination, StandardCopyOption.REPLACE_EXISTING);
+            /*if(!new File(this.rootDirectory+"/"+multipartFile.getOriginalFilename()).exists()) {
+                logger.info("File already exists: " + multipartFile.getOriginalFilename());
+                throw new FileAlreadyExistsException("File already exists: ");
+            }*/
+                Files.copy(inputStream, fileDestination, StandardCopyOption.REPLACE_EXISTING);
         } catch (IOException e) {
             throw new FileException("Cannot Read File contents", e);
         }
@@ -76,6 +80,34 @@ public class FileStoreServiceImpl implements FileStoreService {
             return resource;
         } catch (MalformedURLException e) {
             throw new ResouceFileNotFoundException("Cannot find specified File", e);
+        }
+    }
+
+    @Override
+    public Stream<Path> listAllFiles() throws FileException {
+
+        try {
+            return Files.walk(this.rootDirectory, 1)
+                    .filter(directory -> !directory.equals(this.rootDirectory))
+                    .map(this.rootDirectory::relativize);
+        } catch (IOException e) {
+            throw new FileException("Cannot read uploaded files", e);
+        }
+    }
+
+    @Override
+    public void deleteAllFiles() {
+        FileSystemUtils.deleteRecursively(this.rootDirectory.toFile());
+    }
+
+    @Override
+    public void deleteFile(String filename) throws FileException {
+
+        try {
+            Path path = Paths.get(filename);
+            Files.delete(path);
+        } catch (IOException e) {
+            throw new FileException("Unable to delete file", e);
         }
     }
 }

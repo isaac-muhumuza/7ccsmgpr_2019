@@ -16,10 +16,14 @@ import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.net.URISyntaxException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Random;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.Assert.*;
+import static org.mockito.BDDMockito.given;
+import static org.mockito.Mockito.when;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -49,11 +53,26 @@ public class FileStoreServiceTest {
         assertThat(filename).isEqualToIgnoringCase("test.txt");
     }
 
+    @Test(expected = FileException.class)
+    public void shouldReturnFileExceptionCanNotSaveFile() throws Exception {
+        when(this.fileStoreService.saveFile(new MockMultipartFile("EmptyFile","testFile.txt"
+                ,MediaType.TEXT_PLAIN_VALUE, "".getBytes())))
+                .thenReturn(null);
+        fileStoreService.saveFile(new MockMultipartFile("EmptyFile","testFile.txt"
+                ,MediaType.TEXT_PLAIN_VALUE, "".getBytes()));
+    }
+
     @Test
     public void downloadFile() throws ResouceFileNotFoundException {
-
         Resource testReturnFile = fileStoreService.downloadFileAsResource("test.txt");
         assertThat(testReturnFile.getFilename()).isEqualToIgnoringCase("test.txt");
     }
+
+    @Test(expected = ResouceFileNotFoundException.class)
+    public void shouldReturnExceptionWhenNoFile() throws Exception {
+        when(this.fileStoreService.downloadFileAsResource("NoTest.txt"))
+                .thenReturn(null);
+        fileStoreService.downloadFileAsResource("NoTest.txt");
+     }
 
 }

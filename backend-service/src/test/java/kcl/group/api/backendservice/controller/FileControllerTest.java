@@ -18,6 +18,9 @@ import org.springframework.test.web.servlet.MvcResult;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;
@@ -49,7 +52,6 @@ public class FileControllerTest {
     }
     @Test
     public void shouldDownloadFile() throws Exception {
-
         Resource resource = new ClassPathResource("downloadTestFile.txt");
         given(this.fileStoreService.downloadFileAsResource(resource.getFilename())).willReturn(resource);
         MvcResult result = this.mockMvc.perform(get("/download/downloadTestFile.txt"))
@@ -58,5 +60,18 @@ public class FileControllerTest {
 
         assertThat(result.getResponse().getHeader(HttpHeaders.CONTENT_DISPOSITION)).containsIgnoringCase(resource.getFilename());
 
+    }
+
+    @Test
+    public void shouldListAllFiles() throws Exception {
+        Resource resource = new ClassPathResource("downloadTestFile.txt");
+        Stream<Path> stream = Stream.of(Paths.get("downloadTestFile.txt"));
+
+        given(this.fileStoreService.listAllFiles()).willReturn(stream);
+        MvcResult result = this.mockMvc.perform(get("/listAllFiles"))
+                .andExpect(status().isOk())
+                .andReturn();
+
+        assertThat(result.getResponse().getContentAsString()).containsIgnoringCase("http://localhost/download/downloadTestFile.txt");
     }
 }
